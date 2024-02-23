@@ -1,0 +1,32 @@
+<h1>Witaj w poprawionej wersji gry w węża!</h1>
+<h2>
+  Uzupełnij poniższe formularze, inaczej nie wpuszczę Cię do gry! 
+</h2>
+<form #form="ngForm" (submit)="startGame(form.value)">
+  Imię
+  <input
+    name="playerName"
+    #nameModel="ngModel"
+    required
+    minlength="3"
+    ngModel
+    placeholder="Wpisz nazwę użytkownika"
+  />
+  <div *ngIf="nameModel.touched && nameModel.invalid">
+    Proszę, chociaż wpisz te 3 litery
+  </div>
+  <br />
+  Email
+  <input
+    name="playerEmail"
+    required
+    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" 
+    type="email"
+    placeholder="Wpisz swój adres mailowy"
+    ngModel
+  />
+  <br />
+  <br />
+  <br />
+  <button [disabled]="form.invalid">Rozpocznij grę</button>
+</form>

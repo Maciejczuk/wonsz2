@@ -1,0 +1,30 @@
+<h2>Witaj {{ playerName }} w grze w Snake'a! !</h2>
+Status gry: <p [style.color]="color"><b>{{gameStatus}}</b></p>
+<p>Twoje punkty: {{ points }}</p>
+<p>Zjedz jak najwięcej, Twój czas w grze to: {{ timeInSeconds }}</p>
+
+<h2>Skróty klawiszowe</h2>
+<p>M - restart
+<p>Spacja - Stop</p>
+<p>Enter - Start</p>
+<p>Strzałka w górę - w górę</p>
+<p>Strzałka w dół - w dół</p>
+<p>Strzałka w lewo - w lewo</p>
+<p>Strzałka w prawo - w prawo</p>
+
+  <ngx-snake 
+  (foodEaten)="onGrow()"
+  (gameOver)="onGameOver()"
+  ></ngx-snake>
+
+
+
+
+<button (click)="startButton()">Start</button>
+<button (click)="stopButton()">Stop</button>
+<button (click)="resetButton()">Reset</button>
+<button (click)="upButton()">Up</button>
+<button (click)="downButton()">Down</button>
+<button (click)="leftButton()">Left</button>
+<button (click)="rightButton()">Right</button> 
+<div><button (click)="exitGame()">Exit Game</button></div>
