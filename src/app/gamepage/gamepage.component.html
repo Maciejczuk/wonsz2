@@ -1,7 +1,7 @@
 <h2>Witaj {{ playerName }} w grze w Snake'a!</h2>
 Status gry: <p [style.color]="color"><b>{{gameStatus}}</b></p>
 <p>Twoje punkty: {{ points }}</p>
-<p>Zjedz jak najwięcej, Twój czas w grze to: {{ timeInSeconds }}</p>
+<p>Zjedz jak najwięcej, Twój czas w grze to: {{ timeInSeconds }} sekund, przelicz sobie to na minuty :p </p>
 
 <h2>Skróty klawiszowe</h2>
 <p>M - restart
@@ -16,8 +16,6 @@ Status gry: <p [style.color]="color"><b>{{gameStatus}}</b></p>
   (foodEaten)="onGrow()"
   (gameOver)="onGameOver()"
   ></ngx-snake>
-
-
 
 
 <button (click)="startButton()">Start</button>

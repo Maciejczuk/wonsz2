@@ -99,11 +99,11 @@ export class GamepageComponent {
   }
   public onGrow() {
 
-    this.points += 1; 
+    this.points += 10; 
 
   }
   public onGameOver() {
-    alert('Przegrałeś! może spróbuj raz jeszcze');
+    alert('Przegrałeś!');
     this.gameStatus = "Ready";
     clearInterval(this.timer);
     this._snake.actionReset();
