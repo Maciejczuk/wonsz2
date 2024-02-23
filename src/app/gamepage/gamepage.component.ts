@@ -77,7 +77,7 @@ export class GamepageComponent {
     this._snake.actionReset();
     clearInterval(this.timer);
     this.timeInSeconds = 0;
-    this.gameStatus = "Gotowy do gry";
+    this.gameStatus = "Gotowy do gry?";
     this.color = 'green';
 
   }
